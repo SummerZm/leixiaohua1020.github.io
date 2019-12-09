@@ -12,9 +12,11 @@
 
  - <b>学习链接</b>
 1. [RTMP协议规范-中文](http://download.csdn.net/detail/leixiaohua1020/6563059)
-	Q1: RTMP三次握手和TCP的三次握手的区别？为什么？
-	Q2: 实时信息流块基础头有哪些信息？为什么？
-	Q3: 如何解决ID的回绕？
+  ```
+  	  Q1: RTMP三次握手和TCP的三次握手的区别？为什么？
+  	  Q2: 实时信息流块基础头有哪些信息？为什么？
+  	  Q3: 如何解决ID的回绕？
+  ```
 2. [RTMP协议规范-英文](http://www.adobe.com/cn/devnet/rtmp.html/6563059)
 3. [RTMP流媒体播放过程 ](https://blog.csdn.net/leixiaohua1020/article/details/11704355)
 4. [RTMP规范简单分析](https://blog.csdn.net/leixiaohua1020/article/details/11694129)
