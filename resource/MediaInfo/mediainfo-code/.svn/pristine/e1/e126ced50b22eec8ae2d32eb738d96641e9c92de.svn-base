@@ -1,0 +1,5 @@
+RewriteEngine On
+#RewriteRule ^changelog_0.7.73.bin$ changelog_test.bin [L]
+#RewriteCond %{REQUEST_URI} !=/mediainfo_check/changelog_test.bin
+RewriteRule ^changelog_(.*).bin changelog.bin [L]
+

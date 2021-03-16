@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Google Summer of Code 2015</title>
+</head>
+<body>
+
+<h1>Google Summer of Code 2015</h1>
+<br/>
+<ul>
+    <li>The organization
+    <ul>
+        <li><a href="#AboutUs">About us</a></li>
+        <li><a href="#Why">Why are we applying to GSoC?</a></li>
+        <li><a href="#License">Which license?</a></li>
+        <li><a href="#Contact">Contact</a></li>
+    </ul>
+    </li>
+    <li>Ideas list
+    <ul>
+        <li><a href="#FFV1">FFV1 parser</a></li>
+        <li><a href="#Matroska">Matroska/WebM parser</a></li>
+        <li><a href="#AVC">H.264/AVC parser</a></li>
+        <li><a href="#HEVC">H.265/HEVC parser</a></li>
+        <li><a href="#DTS">DTS parser</a></li>
+        <li><a href="#AC3">AC-3 parser</a></li>
+        <li><a href="#Comparison">FFmpeg / MediaInfo / ExifTool comparision tool</a></li>
+        <li><a href="#OverTime">MediaInfo stats over time</a></li>
+        <li><a href="#Mac">Mac UI</a></li>
+    </ul>
+    </li>
+    <li><a href="#Mentors">Mentors</a></li>
+</ul>
+
+<h2 id="AboutUs">About us</h2>
+<p>
+MediaArea is a software development and technical consulting company based in France with a focus on audiovisual analysis. From its beginning MediaArea has established itself as an open source company throughout, working with partners to produce Free Software to address technical audiovisual challenges and requirements. MediaArea’s focus on technical audiovisual metadata has led to a number of collaborations with archives and broadcasters which need to properly identify and assess digital media for proper quality control and informed decision making. Key MediaArea projects have included: QCTools, BWF MetaEdit and Preforma.
+</p>
+
+<p>
+MediaArea is best known for its centerpiece project, MediaInfo. MediaInfo is a cross-platform, Free Open-Source Software (“FOSS”) application that analyzes digital files, reporting on a number of technical characteristics in the form of metadata, or ‘data about data.’ Focusing on digital audiovisual media, MediaInfo has been a significant asset for several projects ranging from enterprise-class media applications to open repository systems.
+</p>
+
+<p>
+As the founder of MediaArea, Jérôme Martinez, manages MediaInfo and other MediaArea projects in a manner responsive to the complex needs of the archive and media communities.
+</p>
+
+<h2 id="Why">Why are we applying to GSoC?</h2>
+<p>
+Through working in a diverse set of media-focused software development projects, MediaArea has been recently comtemplating several findings. Firstly, operating as a contributing member of a larger open source community is increasingly essential and beneficial to all. Addtionally, although there is an abundance of coders there is a real lack of productive, focused learning opportunities. The annoucement of GSoC projects always peaks our interest to discover how GSoC is addressing technical challenges, media-focused or otherwise, through a mentorship model as well as how the results contribute to our partners or challenges we are involved in. MediaArea has recently been undergrowing growth while maintaining its central open source and community-focused principles. It’s always been envisioned to someday participate in the GSoC project and we feel confident that this is the year to get involved.
+</p>
+
+<p>
+By seeking to participate in GSoC, we are presenting several projects which we believe will be useful both to the communities that we seek to serve, GSoC students, and MediaArea itself. Because much of our work is focused on the non-profit sector, such as archives, media centers, and memory institutions, we frequently envision projects and solutions that are challenging to align with funding opportunities. Because of the size, scope, and spirit of the GSoC program we hope to use some of these practical opportunities for the benefits of such communities.
+</p>
+
+<h2 id="License">Which license?</h2>
+<p>
+Whenever possible MediaArea uses a BSD 2-Clause license. This is to enable users a fairly unrestricted level of creativity to reuse or implement our work in a variety of solutions, both open source and commercial.
+</p>
+
+<h2 id="Contact">Contact us</h2>
+<p>
+    <a href="https://mediaarea.net/">Website</a>,
+    <a href="mailto:info@mediaarea.net">e-mail</a>,
+    <a href="https://sourceforge.net/p/mediainfo/discussion/297610/">Discussion list</a>,
+    <a href="https://github.com/MediaArea">GitHub</a>,
+    <a href="https://twitter.com/MediaArea_Net">Twitter</a>,
+    <a href="http://webchat.freenode.net/?channels=mediaarea">IRC</a>,
+    <a href="https://plus.google.com/u/0/b/113558735901670066206/+MediaAreaNetOfficial">Google Plus</a>,
+    <a href="https://www.facebook.com/pages/MediaAreaNet/120206098054414">Facebook</a>
+</p>
+
+<h2 id="FFV1">FFV1 parser</h2>
+<h3>Description</h3>
+<p>
+FFV1 is a digital lossless video format. We believe that this open format is at a tipping point in regards to its relevant and suitability for work in audiovisual preservation roles. As decades of analog video collections face increasing challenges of deterioration and technical obsolence, it is imperative to enable archives with better abilities and options for digitizing such material sooner rather than later. Standard-based preservation practices mandate a lossless encoding in these efforts and we want to support FFV1&rsquo;s increasing relevance and role in addressing this challenge.<br/>
+To better support the archival use of FFV1 we need to parse more deeply the FFV1 bitstream to identify conformance or coherency issues while there is time to address them. Unfortunately, the specification is under development and relies strongly on the reference encoder for clarity.
+</p>
+<h3>Deliverable</h3>
+<p>
+To provide a means to generate a comprehensive trace of the FFV1 bitstream, partial (begin of the bitstream) or complete depending of the difficulty detected during the implementation. The output shall be suitable to reveal the architecture of FFV1 bitstreams and support analytical, quality control, and conformance checks of the format.</p>
+<h3>Mentor</h3>
+<p>Jérôme Martinez<br/>
+Backup mentor: Dave Rice</p>
+<h3>Skills</h3>
+<p>Basic C++ knowledge<br/>Code reading and analysis of video related algoritm</p>
+<h3>Start point</h3>
+<p><a href="https://github.com/MediaArea/MediaInfoLib/blob/master/Source/MediaInfo/Video/File_Ffv1.cpp">File_Ffv1.cpp</a>: current code to be improved and extended.<br/><a href="http://pastebin.com/LEtp69WK">Trace</a> of current work on FFV1 in Matroska, which is expected to be extended<br/><a href="https://github.com/FFmpeg/FFmpeg/blob/master/libavcodec/ffv1.c">ffv1.c</a>: the reference FFV1 encoder/decoder</p>
+
+
+<h2 id="Matroska">Matroska/WebM parser</h2>
+<h3>Description</h3>
+<p>Matroska is a multimedia (video, audio, text) container. WebM is based on Matroska. We believe that this open format is at a tipping point in regards to its relevant and suitability for work in open source content. The current implementation is poor and lacks several parts of the specification.</p>
+<h3>Deliverable</h3>
+<p>To provide a means to generate a complete and comprehensive trace of the Matroska bytestream. The output shall be suitable to reveal the architecture of Matroska/WebM bytestream and support analytical, quality control, and conformance checks of the format.</p>
+<h3>Mentor</h3>
+<p>Jérôme Martinez<br/>
+Backup mentor: Dave Rice</p>
+<h3>Skills</h3>
+<p>Basic C++ knowledge<br/>Code reading and analysis of multimeida container related algorithm</p>
+<h3>Start point</h3>
+<p><a href="https://github.com/MediaArea/MediaInfoLib/blob/master/Source/MediaInfo/Multiple/File_Mk.cpp">File_Mk.cpp</a>: current code to be improved and extended.</p>
+
+
+<h2 id="AVC">H.264/AVC parser</h2>
+<h3>Description</h3>
+<p>AVC is a lossy or lossless video format that is highly self-descriptive and detailed. MediaInfo has incorporated a partial AVC bitstream analysis but seeks to complete the work. Objectives of the AVC parser include generating an full trace of the format, completing existing analysis of the header and performing slice parsing.</p>
+<h3>Deliverable</h3>
+<p>A trace of the AVC slice bitstream</p>
+<h3>Mentor</h3>
+<p>Vittorio Giovara<br/>
+Backup mentor: Jérôme Martinez</p>
+<h3>Skills</h3>
+<p>Basic C++ knowledge<br/>Spec reading</p>
+<h3>Start point</h3>
+<p><a href="https://github.com/MediaArea/MediaInfoLib/blob/master/Source/MediaInfo/Video/File_Avc.cpp">File_Avc.cpp</a>: current code to be improved and extended.<br/><a href="http://www.itu.int/rec/T-REC-H.264">H.264/AVC specification</a></p>
+
+
+<h2 id="HEVC">H.265/HEVC parser</h2>
+<h3>Description</h3>
+<p>HEVC is a lossy or lossless video format that is highly self-descriptive and detailed, which has been released in 2013 and will be highly used for UHD broadcast. MediaInfo has incorporated a partial HEVC bitstream analysis but seeks to complete the work. Objectives of the HEVC parser include generating an full trace of the format, completing existing analysis of the header and performing slice parsing.</p>
+<h3>Deliverable</h3>
+<p>A trace of the HEVC slice bitstream</p>
+<h3>Mentor</h3>
+<p>Vittorio Giovara<br/>
+Backup mentor: Jérôme Martinez</p>
+<h3>Skills</h3>
+<p>Basic C++ knowledge<br/>Spec reading</p>
+<h3>Start point</h3>
+<p><a href="https://github.com/MediaArea/MediaInfoLib/blob/master/Source/MediaInfo/Video/File_Hevc.cpp">File_Hevc.cpp</a>: current code to be improved and extended.</p>
+<p><a href="http://www.itu.int/rec/T-REC-H.265">H.265/HEVC specification</a></p>
+
+
+<h2 id="DTS">DTS parser</h2>
+<h3>Description</h3>
+<p>DTS is a lossy (and possibly lossless) audio format that is highly used in D-Cinema and Blu-ray. MediaInfo has incorporated a partial DTS bitstream analysis but seeks to complete the work. Objectives of the DTS parser include generating an full trace of the format, completing existing analysis of the header and performing exhaustive detection of all the DTS extensions.</p>
+<h3>Deliverable</h3>
+<p>A trace of the DTS bitstream</p>
+<h3>Mentor</h3>
+<p>Jérôme Martinez<br/>
+Backup mentor: Guillaume Roques</p>
+<h3>Skills</h3>
+<p>Basic C++ knowledge<br/>Spec reading</p>
+<h3>Start point</h3>
+<p><a href="https://github.com/MediaArea/MediaInfoLib/blob/master/Source/MediaInfo/Audio/File_Dts.cpp">File_Dts.cpp</a>: current code to be improved and extended.<br/><a href="hhttp://www.etsi.org/deliver/etsi_ts/102100_102199/102114/01.03.01_60/ts_102114v010301p.pdf">ETSI TS 102.114</a>: The DTS specification, including extensions.</p>
+
+
+<h2 id="AC3">AC-3 and E-AC-3 parser</h2>
+<h3>Description</h3>
+<p>AC-3 is a lossy (and possibly lossless) audio format that is highly used in broadcast. MediaInfo has incorporated a partial AC-3 bitstream analysis but seeks to complete the work. Objectives of the AC-3 parser include generating an full trace of the format, completing existing analysis of the header and performing exhaustive detection of all the AC-3 extensions.</p>
+<h3>Deliverable</h3>
+<p>A trace of the AC-3 bitstream</p>
+<h3>Mentor</h3>
+<p>Jérôme Martinez<br/>
+Backup mentor: Guillaume Roques</p>
+<h3>Skills</h3>
+<p>Basic C++ knowledge<br/>Spec reading</p>
+<h3>Start point</h3>
+<p><a href="https://github.com/MediaArea/MediaInfoLib/blob/master/Source/MediaInfo/Audio/File_Dts.cpp">File_Dts.cpp</a>: current code to be improved and extended.</p>
+<p><a href="http://www.etsi.org/deliver/etsi_ts/102300_102399/102366/01.02.01_60/ts_102366v010201p.pdf">ETSI TS 102 366</a>
+&nbsp;: The AC-3 specification, including extensions.</p>
+
+<h2 id="Comparison">FFmpeg / MediaInfo / ExifTool comparison tool</h2>
+<h3>Description</h3>
+<p>Different information reporting tools, with different algorithms, may produce different results. The goal of this project is to be able to find the differences between product and permit the developers of these project to focus on the detected files and see which tool is the most correct.</p>
+<p>Archivists are looking for such tool in order to be sure the files they received are correctly handled by most software and they would like to report the different entities about potential analysis issues</p>
+<h3>Deliverable</h3>
+<p>A tool able to report the difference between different tools (and different version of tools): end user selects some tools (and their version), and a report display information about files having a difference, with the name of the field. End user must be able to say which value is the right one and flags the tools as buggy for this file.</p>
+<h3>Mentor</h3>
+<p>Dave Rice<br/>
+Backup mentor: Guillaume Roques</p>
+<h3>Skills</h3>
+<p>Basic Audio/Video knowledge<br/>Basic C or basic C++ or PHP<br/>Basic SQL</p>
+<h3>Start point:</h3>
+<p><a href="http://wiki.curatecamp.org/index.php/Association_of_Moving_Image_Archivists_%26_Digital_Library_Federation_Hack_Day_2014#Video_Characterization_Comparison_Viewer">Video Characterization Comparison Viewer</a>: basic comparison tool, to be highly improved</p>
+
+
+<h2 id="OverTime">MediaInfo stats over time</h2>
+<h3>Description</h3>
+<p>Scan of a file repo, and let the end user filters by MediaInfo fields, and check difference over the time.<br/>Grab stats about metadata files info (container, codec, resolution, aspect ratio, ...) from web archives</p>
+<h3>Deliverable</h3>
+<p>A tool able to report report MediaInfo fields over the time and with filtering possibilities</p>
+<h3>Mentor</h3>
+<p>Guilaume Roques<br/>
+Backup mentor: Jérôme Martinez</p>
+<h3>Skills</h3>
+<p>Basic Audio/Video knowledge<br/>PHP<br/>Basic SQL</p>
+<h3>Start point</h3>
+<p>MediaInfo report<br/><a href="https://archive.org/details/movies">Archives.org video repository</a> for a first list of files to scan</p>
+
+
+<h2 id="Mac">Mac UI</h2>
+<h3>Description</h3>
+<p>We would like to offer our apps (MediaInfo, QCTools, DV Analyzer, BWF MetaEdit; All are open source BSD license) on the Mac Store. MediaInfo is aleady on the Mac App Store and we would like to improve it with e.g improved translations system and file comparisons. Other tools are not yet on the Mac AppStore</p>
+<h3>Deliverable</h3>
+<p>Modified version of MediaInfo, QCTools, DV Analyzer, BWF MetaEdit, meeting Apple guidelines for Mac App Store distribution<br/>Update of MediaInfo for Mac source code with improved translation system which can take treanslation from the main MediaInfo translation file</p>
+<h3>Mentor</h3>
+<p>Vittorio Giovara<br/>
+Backup mentor: Jérôme Martinez</p>
+<h3>Skills</h3>
+<p>Basic C++ and ObjC<br/>Reading OS specific guidelines</p>
+<h3>Start point</h3>
+<p>MediaInfo for Mac <a href="https://itunes.apple.com/app/mediainfo/id510620098">MediaInfo for Mac binary</a>, which is already approved but lacks of features<br/><a href="https://github.com/MediaArea/MediaInfo/blob/master/Source/MacAppStore">MediaInfo for Mac source code</a>, which needs to be extended</p>
+
+
+<h2 id="Mentors">Mentors</h2>
+<p>Jérôme Martinez, <a href="http://mediaarea.net/">Website</a>, <a href="https://github.com/JeromeMartinez">GitHub</a>, <a href="https://twitter.com/MediaArea_Net">Twitter</a><br/>
+Guillaume Roques, <a href="https://github.com/GuillaumeRoques">GitHub</a><br/>
+Dave Rice, <a href="http://dericed.com/">Website</a>, <a href="https://github.com/dericed">GitHub</a>, <a href="https://twitter.com/dericed">Twitter</a><br/>
+Vittorio Giovara, <a href="https://github.com/kodabb">GitHub</a>, <a href="https://twitter.com/kodabb">Twitter</a><br/>
+</p>
+</body>
+</html>

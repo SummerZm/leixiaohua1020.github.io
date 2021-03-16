@@ -1,0 +1,5 @@
+* clean up td/tr for menu and the general layout; stop using a table for the menu
+* use fancybox for the screenshots gallery
+* add new screenshots
+* rename "About" menu entry to "Home"
+* make Facebook button follow the language used
